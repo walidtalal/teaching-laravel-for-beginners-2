@@ -53,12 +53,12 @@ return [
     'subscribers' => 'Subscribers',
 
     // testmonials module
-    'testmonials'        => 'Testmonials',
+    'testimonials'        => 'Testimonials',
     'position'           => 'Position',
     'image'              => 'Image',
-    'add_new_testmonial' => 'Add New Testmonial',
-    'show_testmonial'    => 'Show Testmonial',
-    'edit_testmonial'    => 'Edit Testmonial',
+    'add_new_testimonial' => 'Add New Testimonial',
+    'show_testimonial'    => 'Show Testimonial',
+    'edit_testimonial'    => 'Edit Testimonial',
 
     // settings module
     'settings'  => 'Settings',

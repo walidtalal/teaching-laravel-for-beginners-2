@@ -3,6 +3,8 @@
 use App\Http\Controllers\FeatureController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\SubscriberController;
+use App\Http\Controllers\TestimonialController;
+use App\Http\Controllers\TestimonialsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServiceController;
@@ -46,6 +48,11 @@ Route::name('admin.')->prefix(LaravelLocalization::setLocale() . '/admin')->midd
         // =================================== SUBSCRIBERS
         Route::controller(SubscriberController::class)->group(function () {
             Route::resource('subscribers', SubscriberController::class)->only(['index', 'destroy']);
+        });
+
+        // =================================== TESTMONIALS
+        Route::controller(TestimonialController::class)->group(function () {
+            Route::resource('testimonials', TestimonialController::class);
         });
     });
 

@@ -1,0 +1,2 @@
+<button type="submit" class="btn btn-primary btn-sm mt-2"><?php echo e(__('keywords.submit')); ?></button>
+<?php /**PATH C:\laragon\www\laravel-for-beginners-2\resources\views/components/submit-button.blade.php ENDPATH**/ ?>

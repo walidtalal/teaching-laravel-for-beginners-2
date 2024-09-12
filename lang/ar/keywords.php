@@ -53,12 +53,12 @@ return [
     'subscribers' => 'المشتركون',
 
     // Testimonials module
-    'testmonials'        => 'التوصيات',
+    'testimonials'        => 'التوصيات',
     'position'           => 'المنصب',
     'image'              => 'الصورة',
-    'add_new_testmonial' => 'إضافة توصية جديدة',
-    'show_testmonial'    => 'عرض التوصية',
-    'edit_testmonial'    => 'تعديل التوصية',
+    'add_new_testimonial' => 'إضافة توصية جديدة',
+    'show_testimonial'    => 'عرض التوصية',
+    'edit_testimonial'    => 'تعديل التوصية',
 
     // Settings module
     'settings'  => 'الإعدادات',
