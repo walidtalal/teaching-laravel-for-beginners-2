@@ -58,6 +58,10 @@
             {{-- testmonials --}}
             <x-sidebar-tab href="{{ route('admin.testimonials.index') }}" icon="fe-message-circle"
                            name="{{ __('keywords.testimonials') }}"></x-sidebar-tab>
+
+            {{-- settings --}}
+            <x-sidebar-tab href="{{ route('admin.settings.index') }}" icon="fe-settings"
+                           name="{{ __('keywords.settings') }}"></x-sidebar-tab>
         </ul>
 
     </nav>

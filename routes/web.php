@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\FeatureController;
 use App\Http\Controllers\MessageController;
+use App\Http\Controllers\SettingController;
 use App\Http\Controllers\SubscriberController;
 use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\TestimonialsController;
@@ -53,6 +54,11 @@ Route::name('admin.')->prefix(LaravelLocalization::setLocale() . '/admin')->midd
         // =================================== TESTMONIALS
         Route::controller(TestimonialController::class)->group(function () {
             Route::resource('testimonials', TestimonialController::class);
+        });
+
+        // =================================== SETTINGS
+        Route::controller(SettingController::class)->group(function () {
+            Route::resource('settings', SettingController::class)->only(['index', 'update']);
         });
     });
 

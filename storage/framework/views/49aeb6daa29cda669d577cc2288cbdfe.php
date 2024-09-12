@@ -143,6 +143,27 @@
 <?php $component = $__componentOriginalb03251980f62d19dd6bd05af29ae735e; ?>
 <?php unset($__componentOriginalb03251980f62d19dd6bd05af29ae735e); ?>
 <?php endif; ?>
+
+            
+            <?php if (isset($component)) { $__componentOriginalb03251980f62d19dd6bd05af29ae735e = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginalb03251980f62d19dd6bd05af29ae735e = $attributes; } ?>
+<?php $component = App\View\Components\SidebarTab::resolve(['href' => ''.e(route('admin.settings.index')).'','icon' => 'fe-settings','name' => ''.e(__('keywords.settings')).''] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('sidebar-tab'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(App\View\Components\SidebarTab::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes([]); ?> <?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginalb03251980f62d19dd6bd05af29ae735e)): ?>
+<?php $attributes = $__attributesOriginalb03251980f62d19dd6bd05af29ae735e; ?>
+<?php unset($__attributesOriginalb03251980f62d19dd6bd05af29ae735e); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginalb03251980f62d19dd6bd05af29ae735e)): ?>
+<?php $component = $__componentOriginalb03251980f62d19dd6bd05af29ae735e; ?>
+<?php unset($__componentOriginalb03251980f62d19dd6bd05af29ae735e); ?>
+<?php endif; ?>
         </ul>
 
     </nav>
