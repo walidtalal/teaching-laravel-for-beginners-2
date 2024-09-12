@@ -1,6 +1,5 @@
-<!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-    <a href="index.html" class="navbar-brand p-0">
+    <a href="<?php echo e(route('front.index')); ?>" class="navbar-brand p-0">
         <h1 class="m-0">BizConsult</h1>
         <!-- <img src="<?php echo e(asset('assets-front')); ?>/img/logo.png" alt="Logo"> -->
     </a>
@@ -16,5 +15,4 @@
         </div>
     </div>
 </nav>
-<!-- Navbar -->
 <?php /**PATH C:\laragon\www\laravel-for-beginners-2\resources\views/front/partials/navbar.blade.php ENDPATH**/ ?>

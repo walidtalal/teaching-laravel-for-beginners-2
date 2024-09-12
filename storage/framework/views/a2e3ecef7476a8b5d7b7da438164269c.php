@@ -4,15 +4,35 @@
         <div class="row g-5">
             <div class="col-md-6 col-lg-4">
                 <h5 class="text-white mb-4">Get In Touch</h5>
-                <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                <p><i class="fa fa-map-marker-alt me-3"></i><?php echo e($settings->address); ?></p>
+                <p><i class="fa fa-phone-alt me-3"></i><?php echo e($settings->phone); ?></p>
+                <p><i class="fa fa-envelope me-3"></i><?php echo e($settings->email); ?></p>
                 <div class="d-flex pt-2">
-                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
-                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <?php if($settings->twitter): ?>
+                        <a class="btn btn-outline-light btn-social" target="_blank" href="<?php echo e($settings->twitter); ?>"><i
+                                class="fab fa-twitter"></i></a>
+                    <?php endif; ?>
+
+                    <?php if($settings->facebook): ?>
+                        <a class="btn btn-outline-light btn-social" target="_blank" href="<?php echo e($settings->facebook); ?>"><i
+                                class="fab fa-facebook-f"></i></a>
+                    <?php endif; ?>
+
+                    <?php if($settings->youtube): ?>
+                        <a class="btn btn-outline-light btn-social" target="_blank" href="<?php echo e($settings->youtube); ?>"><i
+                                class="fab fa-youtube"></i></a>
+                    <?php endif; ?>
+
+                    <?php if($settings->instagram): ?>
+                        <a class="btn btn-outline-light btn-social" target="_blank" href="<?php echo e($settings->instagram); ?>"><i
+                                class="fab fa-instagram"></i></a>
+                    <?php endif; ?>
+
+                    <?php if($settings->linkedin): ?>
+                        <a class="btn btn-outline-light btn-social" target="_blank" href="<?php echo e($settings->linkedin); ?>"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    <?php endif; ?>
+
                 </div>
             </div>
             <div class="col-md-6 col-lg-4">
