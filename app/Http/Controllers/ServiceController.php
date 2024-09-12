@@ -8,12 +8,14 @@ use App\Http\Requests\UpdateServiceRequest;
 
 class ServiceController extends Controller
 {
+    // private const directory = 'admin.services';
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $services = Service::paginate(10);
+        $services = Service::paginate(config('pagination.count'));
         return view('admin.services.index', get_defined_vars());
     }
 
@@ -28,12 +30,11 @@ class ServiceController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreServiceRequest $request, Service $service)
+    public function store(StoreServiceRequest $request)
     {
-        $data =  $request->validated();
+        $data = $request->validated();
         Service::create($data);
         return to_route('admin.services.index')->with('success', __('keywords.created_successfully'));
-
     }
 
     /**
@@ -57,10 +58,9 @@ class ServiceController extends Controller
      */
     public function update(UpdateServiceRequest $request, Service $service)
     {
-
         $data = $request->validated();
         $service->update($data);
-        return redirect()->route('admin.services.index')->with('success', __('keywords.updated_successfully'));
+        return to_route('admin.services.index')->with('success', __('keywords.updated_successfully'));
     }
 
     /**
@@ -69,7 +69,6 @@ class ServiceController extends Controller
     public function destroy(Service $service)
     {
         $service->delete();
-//        return redirect('admin.services.index')->with('success', __('keywords.deleted_successfully'));
-        return redirect()->route('admin.services.index')->with('success', __('keywords.deleted_successfully'));
+        return to_route('admin.services.index')->with('success', __('keywords.deleted_successfully'));
     }
 }
