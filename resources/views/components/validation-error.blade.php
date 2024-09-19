@@ -1,3 +1,3 @@
-<div>
-    <!-- Do what you can, with what you have, where you are. - Theodore Roosevelt -->
-</div>
+@error($field)
+<span class="text-danger">{{ $message }}</span>
+@enderror

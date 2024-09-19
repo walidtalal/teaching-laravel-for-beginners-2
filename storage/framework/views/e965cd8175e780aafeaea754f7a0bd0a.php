@@ -58,7 +58,7 @@
                             <tr>
                                 <th width="5%">#</th>
                                 <th><?php echo e(__('keywords.title')); ?></th>
-                                <th width="10%"><?php echo e(__('keywords.icon')); ?></th>
+                                <th width="15%"><?php echo e(__('keywords.icon')); ?></th>
                                 <th width="15%"><?php echo e(__('keywords.actions')); ?></th>
                             </tr>
                             </thead>
